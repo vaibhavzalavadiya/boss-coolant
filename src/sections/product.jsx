@@ -115,11 +115,7 @@ export default function ProductsSection() {
               nextEl: ".next-btn",
               prevEl: ".prev-btn"
             }}
-            pagination={{
-              clickable: true,
-              el: ".swiper-pagination", // Ensuring the dots appear below
-              dynamicBullets: true
-            }}
+           
             loop={true}
             spaceBetween={24}
             breakpoints={{
