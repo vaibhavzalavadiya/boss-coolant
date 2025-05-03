@@ -12,21 +12,21 @@ function ProductCard({ title, bgColor, products }) {
 
   return (
     <div className="bg-gray-50 rounded-xl shadow-md overflow-hidden">
-      <div className={`${bgColor} text-white py-4 px-6`}>
+      <div className={`${bgColor} text-white py-4 sm:px-6 px-4`}>
         <h3 className="text-xl md:text-2xl font-bold">{title}</h3>
       </div>
-      <div className="p-6">
+      <div className="sm:p-6 p-4">
         <div className="grid grid-cols-1 gap-4">
           {products.map((product, index) => (
             <div key={index} className="flex items-center p-3 bg-white rounded-lg shadow-sm">
-              <div className={`rounded-full ${getIconBgColor} p-3 mr-4`}>
-                <i className={`fas fa-${product.icon} ${getIconColor} text-xl`}></i>
-              </div>
-              <div>
-                <h4 className="font-semibold">{product.name}</h4>
-                <p className="text-sm text-gray-600">{product.description}</p>
-              </div>
+            <div className={`rounded-full ${getIconBgColor} h-[42px] w-[42px] flex items-center justify-center mr-4`}>
+              <i className={`fas fa-${product.icon} ${getIconColor} text-lg`}></i>
             </div>
+            <div className="flex-1">
+              <h4 className="font-semibold">{product.name}</h4>
+              <p className="text-sm text-gray-600">{product.description}</p>
+            </div>
+          </div>          
           ))}
         </div>
       </div>
@@ -109,7 +109,7 @@ export default function ProductsSection() {
         <h3 className="text-xl md:text-2xl font-bold text-center mb-6">Other Products</h3>
 
         <div className="relative">
-          <Swiper
+          <Swiper className="!pb-4"
             modules={[Navigation, Pagination]}
             navigation={{
               nextEl: ".next-btn",
@@ -125,7 +125,7 @@ export default function ProductsSection() {
             }}
           >
             {additionalProducts.map((product, index) => (
-              <SwiperSlide key={index} className="h-auto">
+              <SwiperSlide key={index} className="!h-auto">
                 <SimpleProductCard product={product} index={index} />
               </SwiperSlide>
             ))}
@@ -150,7 +150,7 @@ export default function ProductsSection() {
         <div className="swiper-pagination mt-4 text-center"></div>
 
         {/* CTA */}
-        <div className="text-center mt-10">
+        <div className="text-center mt-6">
           <a href="#contact" className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition duration-300">
             Request Product Details
           </a>
