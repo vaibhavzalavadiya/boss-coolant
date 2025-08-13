@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import ProductsSection from "../sections/product";
 import ContactSection from "../sections/Contact";
 import TestimonialsSection from "../sections/TestimonialsSection";
+import homeBanner from '../assets/images/home-banner.png';
 
 // Hero Section Component
 function HeroSection() {
@@ -9,13 +10,13 @@ function HeroSection() {
     <section id="home" className="relative min-h-screen lg:py-16 py-10 flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
-          src="/src/assets/images/home-banner.png" 
-          alt="Boss Coolant Products" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50"></div>
-      </div>
+  <img 
+    src={homeBanner} 
+    alt="Boss Coolant Products" 
+    className="w-full h-full object-cover"
+  />
+  <div className="absolute inset-0 bg-black/50"></div>
+</div>
       
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 text-center text-white">
