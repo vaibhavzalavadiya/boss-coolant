@@ -6,6 +6,18 @@ import { sectionContent } from "../config/sectionContent";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import product1 from '../assets/images/product-1.png';
+import product2 from '../assets/images/product-2.png';
+import product3 from '../assets/images/product-3.png';
+import product4 from '../assets/images/product-4.png';
+import product5 from '../assets/images/product-5.png';
+import product6 from '../assets/images/product-6.png';
+import product7 from '../assets/images/product-7.png';
+import product8 from '../assets/images/product-8.png';
+import product9 from '../assets/images/product-9.png';
+import product10 from '../assets/images/product-10.png';
+import productDetails01 from '../assets/images/product-details01.jpg';
+import productDetails02 from '../assets/images/product-details02.jpg';
 
 // Featured Product Card
 function ProductCard({ title, bgColor, products }) {
@@ -57,7 +69,8 @@ function ProductCard({ title, bgColor, products }) {
 
 // Swiper Product Card
 function SimpleProductCard({ product, index }) {
-  const imagePath = `/src/assets/images/product-${index + 1}.png`;
+  const productImages = [product1, product2, product3, product4, product5, product6, product7, product8, product9, product10];
+  const imagePath = productImages[index] || product1;
 
   return (
     <div className="group bg-white rounded-lg border border-gray-200 overflow-hidden h-full flex flex-col">
@@ -160,7 +173,7 @@ export default function ProductsSection() {
                 </div>
                   <div className="relative md:w-1/2 md:pt-[30%] pt-[60%]">
                     <img
-                      src="/src/assets/images/product-details01.jpg"
+                      src={productDetails01}
                       alt="Pure Distilled Water"
                       className="size-full absolute inset-0 object-contain"
                     />
@@ -248,7 +261,7 @@ export default function ProductsSection() {
                 </div>
                 <div className="relative md:w-1/2 md:pt-[30%] pt-[60%]">
                     <img
-                      src="/src/assets/images/product-details02.jpg"
+                      src={productDetails02}
                       alt="Premium Engine Coolant"
                       className="size-full absolute inset-0 object-contain"
                     />

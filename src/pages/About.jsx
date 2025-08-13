@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import SectionHeader from '../components/SectionHeader';
+import aboutBanner from '../assets/images/IMG-20240813-WA0006.jpg';
 
 // Animated Counter Component
 function StatCard({ stat, index }) {
@@ -169,7 +170,7 @@ function About() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/src/assets/images/IMG-20240813-WA0006.jpg" 
+            src={aboutBanner} 
             alt="Boss Coolant About" 
             className="w-full h-full object-cover"
           />

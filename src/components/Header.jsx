@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/images/logo.png';
+
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,7 +15,7 @@ function Header() {
         <div className="flex justify-between items-center py-4">
           <div className="logo-col max-w-[120px] w-full">
             <a href="/" className="block">
-              <img src="/src/assets/images/logo.png" alt="BossCoolant" className="w-full h-auto object-contain" />
+              <img src={logo} alt="BossCoolant" className="w-full h-auto object-contain" />
             </a>
           </div>
           <div className="hidden md:flex space-x-6">

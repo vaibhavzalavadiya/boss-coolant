@@ -1,21 +1,31 @@
 import { useState } from 'react';
 import { Search, Filter } from 'lucide-react';
+import product1 from '../assets/images/product-1.png';
+import product2 from '../assets/images/product-2.png';
+import product3 from '../assets/images/product-3.png';
+import product4 from '../assets/images/product-4.png';
+import product5 from '../assets/images/product-5.png';
+import product6 from '../assets/images/product-6.png';
+import product7 from '../assets/images/product-7.png';
+import product8 from '../assets/images/product-8.png';
+import product9 from '../assets/images/product-9.png';
+import product10 from '../assets/images/product-10.png';
 
 function AllProducts() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const products = [
-    { id: 1, name: "Standard Coolant", category: "coolant", description: "Reliable formula for everyday vehicles.", image: "/src/assets/images/product-1.png" },
-    { id: 2, name: "Premium Coolant", category: "coolant", description: "Enhanced formula for high-performance engines.", image: "/src/assets/images/product-2.png" },
-    { id: 3, name: "Heavy Duty Coolant", category: "coolant", description: "Maximum protection for commercial vehicles.", image: "/src/assets/images/product-3.png" },
-    { id: 4, name: "All-Season Coolant", category: "coolant", description: "Protection in all climates.", image: "/src/assets/images/product-4.png" },
-    { id: 5, name: "Racing Formula", category: "coolant", description: "Optimized for high-performance and racing engines.", image: "/src/assets/images/product-5.png" },
-    { id: 6, name: "Eco-Friendly Coolant", category: "coolant", description: "Biodegradable and low environmental impact.", image: "/src/assets/images/product-6.png" },
-    { id: 7, name: "Long-Life Coolant", category: "coolant", description: "Service intervals up to 5 years.", image: "/src/assets/images/product-7.png" },
-    { id: 8, name: "Factory Pre-Mixed", category: "coolant", description: "Pre-mixed with purified water, ready to use.", image: "/src/assets/images/product-8.png" },
-    { id: 9, name: "High-Mileage Coolant", category: "coolant", description: "Designed for vehicles with 75K+ miles.", image: "/src/assets/images/product-9.png" },
-    { id: 10, name: "Pure Distilled Water", category: "battery", description: "99.9% pure for maximum battery life.", image: "/src/assets/images/product-10.png" },
+    { id: 1, name: "Standard Coolant", category: "coolant", description: "Reliable formula for everyday vehicles.", image: product1 },
+    { id: 2, name: "Premium Coolant", category: "coolant", description: "Enhanced formula for high-performance engines.", image: product2 },
+    { id: 3, name: "Heavy Duty Coolant", category: "coolant", description: "Maximum protection for commercial vehicles.", image: product3 },
+    { id: 4, name: "All-Season Coolant", category: "coolant", description: "Protection in all climates.", image: product4 },
+    { id: 5, name: "Racing Formula", category: "coolant", description: "Optimized for high-performance and racing engines.", image: product5 },
+    { id: 6, name: "Eco-Friendly Coolant", category: "coolant", description: "Biodegradable and low environmental impact.", image: product6 },
+    { id: 7, name: "Long-Life Coolant", category: "coolant", description: "Service intervals up to 5 years.", image: product7 },
+    { id: 8, name: "Factory Pre-Mixed", category: "coolant", description: "Pre-mixed with purified water, ready to use.", image: product8 },
+    { id: 9, name: "High-Mileage Coolant", category: "coolant", description: "Designed for vehicles with 75K+ miles.", image: product9 },
+    { id: 10, name: "Pure Distilled Water", category: "battery", description: "99.9% pure for maximum battery life.", image: product10 },
   ];
 
   const categories = [
