@@ -7,7 +7,7 @@ import homeBanner from '../assets/images/home-banner.png';
 // Hero Section Component
 function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen lg:py-16 py-10 flex items-center">
+    <section id="home" className="relative  lg:py-16 py-10 flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0">
   <img 
