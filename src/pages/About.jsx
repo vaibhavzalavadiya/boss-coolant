@@ -306,7 +306,7 @@ function About() {
 
           {/* Leadership Section */}
           <div className="lg:mb-16 mb-10">
-            <div className="text-center mb-12">
+            <div className="text-center lg:mb-12 mb-6">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Leadership Team</h3>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Meet the visionary leaders driving Boss Coolant's mission to deliver excellence in automotive cooling solutions.

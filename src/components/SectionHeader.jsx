@@ -25,7 +25,7 @@ function SectionHeader({
       </h2>
       
       {description && (
-        <p className="md:text-lg text-sm text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <p className="section-description">
           {description}
         </p>
       )}

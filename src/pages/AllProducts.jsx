@@ -44,7 +44,7 @@ function AllProducts() {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center lg:mb-12 mb-6">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">All Products</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Explore our complete range of premium automotive cooling solutions and battery maintenance products.
@@ -52,7 +52,7 @@ function AllProducts() {
         </div>
 
         {/* Search and Filter */}
-        <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
+        <div className="bg-white rounded-xl shadow-sm p-4 lg:p-6 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
             {/* Search */}
             <div className="flex-1 relative">

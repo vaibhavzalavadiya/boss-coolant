@@ -93,7 +93,7 @@ function ProductDetails() {
                 <span className="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Premium Quality</span>
               </div>
               
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h2>
               
               {/* Quality Badges */}
               <div className="flex flex-wrap gap-2 mb-6">

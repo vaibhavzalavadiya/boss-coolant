@@ -126,14 +126,14 @@ function BenefitsSection() {
   return (
     <section id="benefits" className="py-10 md:py-16 bg-gray-100">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        <div className="text-center lg:mb-12 mb-6">
+          <div className="section-badge">
             Why Choose Us
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Why Choose Boss Coolant
+          <h2 className="section-title">
+            Why Choose Boss <span className='section-highlight'> Coolant</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="section-description">
             Experience the difference with our premium automotive cooling solutions designed for maximum performance and reliability.
           </p>
         </div>

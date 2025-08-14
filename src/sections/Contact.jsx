@@ -37,13 +37,13 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-12 md:py-16 bg-gray-800 text-white">
+    <section id="contact" className="py-10 md:py-16 bg-gray-800 text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">Contact Us</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-center lg:mb-8 mb-5">Contact Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Form */}
-          <form onSubmit={handleSubmit} className="bg-gray-700 p-6 rounded-lg shadow-md">
+          <form onSubmit={handleSubmit} className="bg-gray-700 lg:p-6 p-4 rounded-lg shadow-md">
             {["name", "phone", "email"].map((field, index) => (
               <div key={index} className="mb-4">
                 <label htmlFor={field} className="block text-sm font-medium mb-2">
@@ -85,7 +85,7 @@ export default function ContactSection() {
           </form>
 
           {/* Contact Info */}
-          <div className="bg-gray-700 p-6 rounded-lg shadow-md h-full">
+          <div className="bg-gray-700 lg:p-6 p-4 rounded-lg shadow-md h-full">
             <h3 className="text-xl font-bold mb-6">Get In Touch</h3>
             <div className="space-y-4">
               {[
@@ -106,7 +106,7 @@ export default function ContactSection() {
               ))}
             </div>
 
-            <div className="mt-8">
+            <div className="lg:mt-8 mt-5">
               <h4 className="font-semibold mb-3">Follow Us</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((link, index) => (
