@@ -165,8 +165,23 @@ function BenefitCard({ benefit }) {
 
 
 function Home() {
-  // Smooth scrolling for anchor links
+  // Smooth scrolling for anchor links and hash navigation
   useEffect(() => {
+    // Handle hash in URL on page load
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 500);
+      }
+    };
+
+    scrollToHash();
+
     const handleSmoothScroll = (e) => {
       e.preventDefault();
       const href = e.currentTarget.getAttribute('href');
