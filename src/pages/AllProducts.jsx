@@ -1,37 +1,33 @@
 import { useState } from 'react';
 import { Search, Filter } from 'lucide-react';
-import product1 from '../assets/images/product-1.png';
-import product2 from '../assets/images/product-2.png';
-import product3 from '../assets/images/product-3.png';
-import product4 from '../assets/images/product-4.png';
-import product5 from '../assets/images/product-5.png';
-import product6 from '../assets/images/product-6.png';
-import product7 from '../assets/images/product-7.png';
-import product8 from '../assets/images/product-8.png';
-import product9 from '../assets/images/product-9.png';
-import product10 from '../assets/images/product-10.png';
+import yellowFront from '../assets/images/boss-coolant-yellow-front.png';
+import brownFront from '../assets/images/boss-coolant-brown-front.png';
+import greenFront from '../assets/images/boss-coolant-green-front.png';
+import redFront from '../assets/images/boss-coolant-red-front.png';
+import bottle1ltr from '../assets/images/1ltr bottle.png';
+import bottle5ltr from '../assets/images/5ltr bottle.png';
+import can5ltr from '../assets/images/5ltr-can.png';
+import tank1000ltr from '../assets/images/1000ltr tank.png';
 
 function AllProducts() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const products = [
-    { id: 1, name: "Standard Coolant", category: "coolant", description: "Reliable formula for everyday vehicles.", image: product1 },
-    { id: 2, name: "Premium Coolant", category: "coolant", description: "Enhanced formula for high-performance engines.", image: product2 },
-    { id: 3, name: "Heavy Duty Coolant", category: "coolant", description: "Maximum protection for commercial vehicles.", image: product3 },
-    { id: 4, name: "All-Season Coolant", category: "coolant", description: "Protection in all climates.", image: product4 },
-    { id: 5, name: "Racing Formula", category: "coolant", description: "Optimized for high-performance and racing engines.", image: product5 },
-    { id: 6, name: "Eco-Friendly Coolant", category: "coolant", description: "Biodegradable and low environmental impact.", image: product6 },
-    { id: 7, name: "Long-Life Coolant", category: "coolant", description: "Service intervals up to 5 years.", image: product7 },
-    { id: 8, name: "Factory Pre-Mixed", category: "coolant", description: "Pre-mixed with purified water, ready to use.", image: product8 },
-    { id: 9, name: "High-Mileage Coolant", category: "coolant", description: "Designed for vehicles with 75K+ miles.", image: product9 },
-    { id: 10, name: "Pure Distilled Water", category: "battery", description: "99.9% pure for maximum battery life.", image: product10 },
+    { id: 1, name: "Yellow Coolant", category: "coolant", description: "Premium yellow coolant for superior engine protection.", image: yellowFront },
+    { id: 2, name: "Brown Coolant", category: "coolant", description: "Advanced brown formula for heavy-duty applications.", image: brownFront },
+    { id: 3, name: "Green Coolant", category: "coolant", description: "Classic green coolant for all vehicle types.", image: greenFront },
+    { id: 4, name: "Red Coolant", category: "coolant", description: "High-performance red coolant for modern engines.", image: redFront },
+    { id: 5, name: "1 Liter Bottle", category: "packaging", description: "Convenient 1L bottle for personal vehicles.", image: bottle1ltr },
+    { id: 6, name: "5 Liter Bottle", category: "packaging", description: "Economy 5L bottle for multiple refills.", image: bottle5ltr },
+    { id: 7, name: "5 Liter Can", category: "packaging", description: "Industrial 5L can for commercial use.", image: can5ltr },
+    { id: 8, name: "1000 Liter Tank", category: "packaging", description: "Bulk 1000L tank for fleet and industrial operations.", image: tank1000ltr },
   ];
 
   const categories = [
     { id: 'all', name: 'All Products' },
-    { id: 'coolant', name: 'Engine Coolants' },
-    { id: 'battery', name: 'Battery Water' }
+    { id: 'coolant', name: 'Coolant Types' },
+    { id: 'packaging', name: 'Packaging Options' }
   ];
 
   const filteredProducts = products.filter(product => {
@@ -117,7 +113,7 @@ function AllProducts() {
                       ? 'bg-blue-100 text-blue-700' 
                       : 'bg-green-100 text-green-700'
                   }`}>
-                    {product.category === 'coolant' ? 'Engine Coolant' : 'Battery Water'}
+                    {product.category === 'coolant' ? 'Engine Coolant' : 'Distilled Water'}
                   </span>
                 </div>
                 
@@ -153,12 +149,12 @@ function AllProducts() {
             Can't find what you're looking for? Contact us for custom automotive cooling solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg transition-colors">
+            <a href="mailto:bossandcoolant@gmail.com" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg transition-colors text-center">
               Get Quote
-            </button>
-            <button className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+            </a>
+            <a href="tel:+918980211051" className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
               Call Now
-            </button>
+            </a>
           </div>
         </div>
       </div>

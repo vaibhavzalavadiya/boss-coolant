@@ -6,16 +6,14 @@ import { sectionContent } from "../config/sectionContent";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import product1 from '../assets/images/product-1.png';
-import product2 from '../assets/images/product-2.png';
-import product3 from '../assets/images/product-3.png';
-import product4 from '../assets/images/product-4.png';
-import product5 from '../assets/images/product-5.png';
-import product6 from '../assets/images/product-6.png';
-import product7 from '../assets/images/product-7.png';
-import product8 from '../assets/images/product-8.png';
-import product9 from '../assets/images/product-9.png';
-import product10 from '../assets/images/product-10.png';
+import yellowFront from '../assets/images/boss-coolant-yellow-front.png';
+import brownFront from '../assets/images/boss-coolant-brown-front.png';
+import greenFront from '../assets/images/boss-coolant-green-front.png';
+import redFront from '../assets/images/boss-coolant-red-front.png';
+import bottle1ltr from '../assets/images/1ltr bottle.png';
+import bottle5ltr from '../assets/images/5ltr bottle.png';
+import can5ltr from '../assets/images/5ltr-can.png';
+import tank1000ltr from '../assets/images/1000ltr tank.png';
 import productDetails01 from '../assets/images/product-details01.jpg';
 import productDetails02 from '../assets/images/product-details02.jpg';
 
@@ -69,8 +67,8 @@ function ProductCard({ title, bgColor, products }) {
 
 // Swiper Product Card
 function SimpleProductCard({ product, index }) {
-  const productImages = [product1, product2, product3, product4, product5, product6, product7, product8, product9, product10];
-  const imagePath = productImages[index] || product1;
+  const productImages = [yellowFront, brownFront, greenFront, redFront, bottle1ltr, bottle5ltr, can5ltr, tank1000ltr];
+  const imagePath = productImages[index] || yellowFront;
 
   return (
     <div className="group bg-white rounded-lg border border-gray-200 overflow-hidden h-full flex flex-col">
@@ -92,7 +90,7 @@ function SimpleProductCard({ product, index }) {
         <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1">{product.description}</p>
 
         {/* Features */}
-        <div className="flex justify-center gap-2 mb-4">
+        <div className="flex gap-2 mb-4">
           <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">Eco-Friendly</span>
           <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">ISO Certified</span>
         </div>
@@ -100,7 +98,7 @@ function SimpleProductCard({ product, index }) {
         {/* Button - Always at bottom */}
         <button
           onClick={() => window.location.href = `/product/${index + 1}`}
-          className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200 w-full mt-auto"
+          className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200 w-full mt-auto cursor-pointer"
         >
           Learn More
         </button>
@@ -132,16 +130,14 @@ export default function ProductsSection() {
   };
 
   const additionalProducts = [
-    { name: "Standard Coolant", description: "Reliable formula for everyday vehicles." },
-    { name: "Premium Coolant", description: "Enhanced formula for high-performance engines." },
-    { name: "Heavy Duty Coolant", description: "Maximum protection for commercial vehicles." },
-    { name: "All-Season Coolant", description: "Protection in all climates." },
-    { name: "Racing Formula", description: "Optimized for high-performance and racing engines." },
-    { name: "Eco-Friendly Coolant", description: "Biodegradable and low environmental impact." },
-    { name: "Long-Life Coolant", description: "Service intervals up to 5 years." },
-    { name: "Factory Pre-Mixed", description: "Pre-mixed with purified water, ready to use." },
-    { name: "High-Mileage Coolant", description: "Designed for vehicles with 75K+ miles." },
-    { name: "Silicate-Free Coolant", description: "Safe for aluminum components." }
+    { name: "Yellow Coolant", description: "Premium yellow coolant for superior engine protection." },
+    { name: "Brown Coolant", description: "Advanced brown formula for heavy-duty applications." },
+    { name: "Green Coolant", description: "Classic green coolant for all vehicle types." },
+    { name: "Red Coolant", description: "High-performance red coolant for modern engines." },
+    { name: "1 Liter Bottle", description: "Convenient 1L bottle for personal vehicles." },
+    { name: "5 Liter Bottle", description: "Economy 5L bottle for multiple refills." },
+    { name: "5 Liter Can", description: "Industrial 5L can for commercial use." },
+    { name: "1000 Liter Tank", description: "Bulk 1000L tank for fleet and industrial operations." }
   ];
 
   return (

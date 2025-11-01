@@ -41,15 +41,15 @@ function HeroSection() {
               <i className="fas fa-rocket mr-2"></i>
               Discover Products
             </a>
-            <a href="#contact" className="bg-white/10 backdrop-blur-sm text-white lg:px-8 px-4 lg:py-4 py-3 rounded-lg font-semibold md:text-lg text-base border-2 border-white/30 hover:bg-white/20 transition-all duration-300">
-              <i className="fas fa-handshake mr-2"></i>
-              Partner With Us
+            <a href="tel:+918980211051" className="bg-white/10 backdrop-blur-sm text-white lg:px-8 px-4 lg:py-4 py-3 rounded-lg font-semibold md:text-lg text-base border-2 border-white/30 hover:bg-white/20 transition-all duration-300">
+              <i className="fas fa-phone mr-2"></i>
+              Call Us Now
             </a>
           </div>
           
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:gap-6 gap-4 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-blue-white mb-1">600+</div>
+              <div className="text-2xl md:text-3xl font-bold text-blue-white mb-1">1000+</div>
               <div className="text-white text-sm">Happy Customers</div>
             </div>
             <div className="text-center">

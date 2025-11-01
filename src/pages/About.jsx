@@ -101,32 +101,7 @@ function CountdownSection() {
     return () => clearInterval(timer);
   }, []);
 
-  return (
-    <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 lg:mb-16 mb-10">
-      <div className="text-center mb-8">
-        <h3 className="text-2xl font-bold text-white mb-2">Special Launch Offer</h3>
-        <p className="text-blue-100">Limited time offer on our premium coolant range</p>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-          <div className="text-3xl font-bold text-white mb-1">{timeLeft.days}</div>
-          <div className="text-blue-200 text-sm uppercase tracking-wide">Days</div>
-        </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-          <div className="text-3xl font-bold text-white mb-1">{timeLeft.hours}</div>
-          <div className="text-blue-200 text-sm uppercase tracking-wide">Hours</div>
-        </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-          <div className="text-3xl font-bold text-white mb-1">{timeLeft.minutes}</div>
-          <div className="text-blue-200 text-sm uppercase tracking-wide">Minutes</div>
-        </div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-          <div className="text-3xl font-bold text-white mb-1">{timeLeft.seconds}</div>
-          <div className="text-blue-200 text-sm uppercase tracking-wide">Seconds</div>
-        </div>
-      </div>
-    </div>
-  );
+
 }
 
 function About() {
@@ -211,16 +186,16 @@ function About() {
             <div className="bg-white rounded-2xl p-4 md:p-12 shadow-xl border border-gray-100">
               <div className="max-w-4xl mx-auto text-center">
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Journey</h3>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                <p className="md:text-lg text-base text-gray-600 lg:mb-6 mb-4 leading-relaxed">
                   Since 2014, Boss Coolant has been Gujarat's trusted partner in automotive excellence. 
                   What started as a vision to provide superior engine protection has grown into a leading 
                   manufacturer of premium coolants and distilled water.
                 </p>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                <p className="md:text-lg text-base text-gray-600 leading-relaxed">
                   Our commitment to innovation, quality, and customer satisfaction has earned us the trust 
                   of over 5,000 customers across Gujarat and beyond.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-6 gap-4 lg:mt-8 mt-5">
                   <div className="bg-blue-50 lg:p-6 p-4 rounded-xl">
                     <i className="fas fa-industry text-blue-600 text-2xl mb-3"></i>
                     <h4 className="font-semibold text-gray-900 mb-2">Manufacturing Excellence</h4>
@@ -266,7 +241,7 @@ function About() {
           {/* Achievements */}
           <div className="lg:mb-16 mb-10">
             <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Our Achievements</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:gap-6 gap-4">
+            <div className="grid sm:grid-cols-2 grid-cols-1 md:grid-cols-4 lg:gap-6 gap-4">
               {achievements.map((achievement, index) => (
                 <div key={index} className="bg-white rounded-xl lg:p-6 p-4 shadow-md border border-gray-100 hover:shadow-lg transition-shadow text-center">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -281,8 +256,8 @@ function About() {
 
           {/* Mission & Vision */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:mb-16 mb-10">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+            <div className="bg-white rounded-lg p-4 lg:p-8 shadow-md border border-gray-100">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center lg:mb-6 mb-4">
                 <i className="fas fa-bullseye text-blue-600 text-2xl"></i>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
@@ -292,8 +267,8 @@ function About() {
               </p>
             </div>
             
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+            <div className="bg-white rounded-lg p-4 lg:p-8 shadow-md border border-gray-100">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center lg:mb-6 mb-4">
                 <i className="fas fa-eye text-green-600 text-2xl"></i>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
@@ -305,7 +280,7 @@ function About() {
           </div>
 
           {/* Leadership Section */}
-          <div className="lg:mb-16 mb-10">
+          <div>
             <div className="text-center lg:mb-12 mb-6">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Leadership Team</h3>
               <p className="text-gray-600 max-w-2xl mx-auto">
@@ -314,8 +289,8 @@ function About() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {leadership.map((leader, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow">
-                  <div className="text-center mb-6">
+                <div key={index} className="bg-white rounded-lg lg:p-8 p-4 shadow-md border border-gray-100 hover:shadow-2xl transition-shadow">
+                  <div className="text-center lg:mb-6 mb-4">
                     <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-blue-200">
                       <img 
                         src={leader.image} 
@@ -350,24 +325,7 @@ function About() {
             </div>
           </div>
 
-          {/* Countdown Section */}
-          <CountdownSection />
-
-          {/* Contact CTA */}
-          <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-8 text-center text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Work With Us?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Contact us today to learn more about our premium automotive cooling solutions and how we can help your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
-                Get Quote
-              </button>
-              <button className="bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors">
-                Contact Us
-              </button>
-            </div>
-          </div>
+       
         </div>
       </section>
     </div>

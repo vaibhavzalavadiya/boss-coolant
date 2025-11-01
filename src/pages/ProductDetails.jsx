@@ -1,59 +1,135 @@
 import { useParams } from 'react-router-dom';
 import { ArrowLeft, Shield, Truck, Award, CheckCircle } from 'lucide-react';
+import yellowFront from '../assets/images/boss-coolant-yellow-front.png';
+import brownFront from '../assets/images/boss-coolant-brown-front.png';
+import greenFront from '../assets/images/boss-coolant-green-front.png';
+import redFront from '../assets/images/boss-coolant-red-front.png';
+import bottle1ltr from '../assets/images/1ltr bottle.png';
+import bottle5ltr from '../assets/images/5ltr bottle.png';
+import can5ltr from '../assets/images/5ltr-can.png';
+import tank1000ltr from '../assets/images/1000ltr tank.png';
 
 function ProductDetails() {
   const { id } = useParams();
   
+  const productImages = [yellowFront, brownFront, greenFront, redFront, bottle1ltr, bottle5ltr, can5ltr, tank1000ltr];
+  
   const products = [
     { 
-      name: "Standard Coolant", 
-      description: "Reliable formula for everyday vehicles with superior heat transfer properties.",
-
-
+      name: "Yellow Coolant", 
+      description: "Premium yellow coolant for superior engine protection with advanced heat transfer properties.",
+      image: yellowFront,
       features: ["Long-lasting protection", "All engine types", "Temperature resistant", "Corrosion prevention"],
       specifications: {
-        "Volume": "1 Liter",
+        "Volume": "Available in multiple sizes",
         "Type": "Ethylene Glycol Based",
-        "Color": "Blue",
+        "Color": "Yellow",
         "Freezing Point": "-37°C",
         "Boiling Point": "108°C",
         "pH Level": "8.0 - 11.0"
       }
     },
     { 
-      name: "Premium Coolant", 
-      description: "Enhanced formula for high-performance engines with advanced additives.",
-
-
+      name: "Brown Coolant", 
+      description: "Advanced brown formula for heavy-duty applications and commercial vehicles.",
+      image: brownFront,
       features: ["High-performance formula", "Extended life", "Superior protection", "Racing approved"],
       specifications: {
-        "Volume": "1 Liter",
+        "Volume": "Available in multiple sizes",
         "Type": "OAT Technology",
-        "Color": "Red",
+        "Color": "Brown",
         "Freezing Point": "-40°C",
         "Boiling Point": "110°C",
         "pH Level": "7.5 - 11.0"
       }
     },
     { 
-      name: "Heavy Duty Coolant", 
-      description: "Maximum protection for commercial vehicles and heavy machinery.",
-
-
+      name: "Green Coolant", 
+      description: "Classic green coolant for all vehicle types with proven reliability.",
+      image: greenFront,
       features: ["Commercial grade", "Heavy duty protection", "Extended intervals", "Fleet approved"],
       specifications: {
-        "Volume": "1 Liter",
+        "Volume": "Available in multiple sizes",
         "Type": "Hybrid Technology",
         "Color": "Green",
         "Freezing Point": "-42°C",
         "Boiling Point": "112°C",
         "pH Level": "8.5 - 11.5"
       }
+    },
+    { 
+      name: "Red Coolant", 
+      description: "High-performance red coolant for modern engines and extreme conditions.",
+      image: redFront,
+      features: ["All-weather protection", "Year-round use", "Versatile formula", "Cost-effective"],
+      specifications: {
+        "Volume": "Available in multiple sizes",
+        "Type": "Universal",
+        "Color": "Red",
+        "Freezing Point": "-38°C",
+        "Boiling Point": "109°C",
+        "pH Level": "8.0 - 10.5"
+      }
+    },
+    { 
+      name: "1 Liter Bottle", 
+      description: "Convenient 1L bottle perfect for personal vehicles and easy storage.",
+      image: bottle1ltr,
+      features: ["Racing grade", "Maximum cooling", "High-temp stable", "Competition approved"],
+      specifications: {
+        "Volume": "1 Liter",
+        "Type": "Distilled Water",
+        "Packaging": "Bottle",
+        "Material": "PET Plastic",
+        "Usage": "Personal Vehicles",
+        "Shelf Life": "2 Years"
+      }
+    },
+    { 
+      name: "5 Liter Bottle", 
+      description: "Economy 5L bottle for multiple refills and cost-effective maintenance.",
+      image: bottle5ltr,
+      features: ["Biodegradable", "Non-toxic", "Eco-certified", "Safe disposal"],
+      specifications: {
+        "Volume": "5 Liters",
+        "Type": "Distilled Water",
+        "Packaging": "Bottle",
+        "Material": "PET Plastic",
+        "Usage": "Multiple Refills",
+        "Shelf Life": "2 Years"
+      }
+    },
+    { 
+      name: "5 Liter Can", 
+      description: "Industrial 5L can designed for commercial and workshop use.",
+      image: can5ltr,
+      features: ["5-year protection", "Extended service", "Low maintenance", "Cost savings"],
+      specifications: {
+        "Volume": "5 Liters",
+        "Type": "Distilled Water",
+        "Packaging": "Metal Can",
+        "Material": "Steel",
+        "Usage": "Commercial Use",
+        "Shelf Life": "3 Years"
+      }
+    },
+    { 
+      name: "1000 Liter Tank", 
+      description: "Bulk 1000L tank for fleet operations and large-scale industrial applications.",
+      image: tank1000ltr,
+      features: ["Bulk supply", "Fleet operations", "Cost-effective", "Industrial grade"],
+      specifications: {
+        "Volume": "1000 Liters",
+        "Type": "Bulk Tank",
+        "Material": "Industrial Grade",
+        "Freezing Point": "-37°C",
+        "Boiling Point": "108°C",
+        "pH Level": "8.0 - 11.0"
+      }
     }
   ];
 
   const product = products[id - 1] || products[0];
-  const imagePath = `/images/product-${id}.png`;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -73,17 +149,10 @@ function ProductDetails() {
             <div className="p-8">
               <div className="bg-gray-50 rounded-xl p-8 mb-4">
                 <img 
-                  src={imagePath} 
+                  src={product.image} 
                   alt={product.name}
                   className="w-full h-96 object-contain"
                 />
-              </div>
-              <div className="grid grid-cols-4 gap-2">
-                {[1,2,3,4].map((i) => (
-                  <div key={i} className="bg-gray-100 rounded-lg p-2 cursor-pointer hover:bg-gray-200 transition-colors">
-                    <img src={imagePath} alt="" className="w-full h-16 object-contain" />
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -131,12 +200,12 @@ function ProductDetails() {
                   Request Quote
                 </button>
                 <div className="grid grid-cols-2 gap-3">
-                  <button className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition-colors text-sm">
+                  <a href="tel:+918980211051" className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition-colors text-sm text-center">
                     📞 Call Now
-                  </button>
-                  <button className="bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium py-3 px-4 rounded-lg transition-colors text-sm">
+                  </a>
+                  <a href="mailto:bossandcoolant@gmail.com" className="bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium py-3 px-4 rounded-lg transition-colors text-sm text-center">
                     📧 Email Us
-                  </button>
+                  </a>
                 </div>
               </div>
 

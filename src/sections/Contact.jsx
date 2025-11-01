@@ -89,9 +89,9 @@ export default function ContactSection() {
             <h3 className="text-xl font-bold mb-6">Get In Touch</h3>
             <div className="space-y-4">
               {[
-                { Icon: MapPin, label: "Our Location", text: "123 Industrial Area, Phase 2, New Delhi, India" },
-                { Icon: Phone, label: "Call Us", text: "+91 98765 43210\n+91 12345 67890" },
-                { Icon: Mail, label: "Email Us", text: "info@BossCoolant.com\nsales@BossCoolant.com" },
+                { Icon: MapPin, label: "Our Location", text: "46 Shiv Villa Society, Mission Road Surat, Gujarat" },
+                { Icon: Phone, label: "Call Us", text: "+91 8980211051" },
+                { Icon: Mail, label: "Email Us", text: "bossandcoolant@gmail.com" },
                 { Icon: Clock, label: "Business Hours", text: "Mon - Sat: 9:00 AM - 6:00 PM\nSunday: Closed" },
               ].map(({ Icon, label, text }, i) => (
                 <div key={i} className="flex items-start">
